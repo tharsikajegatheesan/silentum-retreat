@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Activities | Silentum Retreat</title>
+  <link rel="stylesheet" href="css/activitiescss.css" />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+body {
+      background-color: rgb(223, 220, 220); /* black background for the body */
+      color: #d7ded6; /* light text */
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      color: #0f1b12;
+      padding: 0;
+    }
+header {
+      height: 700px; /* or any height you want */
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      transition: background-image 1s ease-in-out;
+      position: relative;
+    }
+
+    .navbar {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      background: #674d3b; /* dark brown */
+      padding: 10px 20px;
+      border-radius: 10px;
+      box-sizing: border-box;
+    }
+    .navbar .logo {
+      font-weight: bold;
+      font-size: 24px;
+      color: #87a06e; /* soft green */
+      text-decoration: none;
+    }
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+      margin: 0;
+      padding: 0;
+    }
+    .nav-links li {
+      position: relative;
+    }
+    .nav-links a {
+      color: #d7ded6; /* light text */
+      text-decoration: none;
+      font-weight: 600;
+      padding: 8px 6px;
+      display: block;
+      transition: color 0.3s;
+    }
+    .nav-links a:hover,
+    .nav-links a.active {
+      color: #87a06e; /* green accent */
+    }
+
+    /* Dropdown */
+    .dropdown {
+  position: relative;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 100%; /* show directly below */
+  left: 0;
+  background: #222;
+  min-width: 160px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.7);
+  z-index: 10;
+  border-radius: 4px;
+  padding: 8px 0;
+}
+
+.dropdown:hover .dropdown-content,
+.dropdown-content:hover {
+  display: block;
+}
+
+    .dropdown .dropbtn::after {
+      content: " ▼";
+      font-size: 12px;
+    }
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background: #222; /* dark background */
+      min-width: 160px;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.7);
+      z-index: 10;
+      border-radius: 4px;
+      margin-top: 5px;
+    }
+    .dropdown-content li {
+      padding: 0;
+    }
+    .dropdown-content a {
+      padding: 10px 16px;
+      display: block;
+      color: #d7ded6;
+    }
+    .dropdown-content a:hover {
+      background: #bad2a2;
+      color: #111;
+    }
+/* Gallery Section */
+.gallery {
+  background-color: #d7ded6;
+  padding: 60px 20px;
+  text-align: center;
+  color: #674d3b;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.gallery h1 {
+  font-size: 2.5rem;
+  color: #674d3b;
+  margin-bottom: 10px;
+}
+
+.gallery p {
+  font-size: 1.1rem;
+  color: #4a3c32;
+  max-width: 700px;
+  margin: 0 auto 40px auto;
+  line-height: 1.6;
+}
+
+/* Gallery Grid */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.gallery img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.gallery img:hover {
+  transform: scale(1.05);
+}
+
+
+.gallery-grid img {
+  width: 100%;
+  height: 220px; /* Set the desired fixed height */
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  object-fit: cover; /* Ensures image fills area and is cropped if needed */
+  transition: transform 0.3s ease;
+}
+
+
+.gallery-grid img:hover {
+  transform: scale(1.05);
+}
+
+/* Emphasis note */
+.gallery em {
+  font-size: 0.9rem;
+  color: #674d3b;
+  display: block;
+  margin-top: 30px;
+  font-style: italic;
+}
+#lightbox {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.95);
+  justify-content: center;
+  align-items: center;
+  backdrop-filter: blur(4px);
+}
+
+#lightbox img {
+  max-width: 95vw;
+  max-height: 90vh;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+  border-radius: 10px;
+}
+
+#lightbox-close {
+  position: absolute;
+  top: 30px;
+  right: 40px;
+  color: #fff;
+  font-size: 36px;
+  font-weight: bold;
+  cursor: pointer;
+  z-index: 10000;
+}
+
+
+    footer {
+      background: #0f1b12 url('image/footer-bg.jpg') no-repeat center center / cover;
+      color: #d7ded6;
+      padding: 60px 20px 30px;
+      font-size: 14px;
+    }
+    .footer-content {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      max-width: 1200px;
+      margin: auto;
+      gap: 30px;
+    }
+    .footer-col {
+      flex: 1 1 220px;
+    }
+    .footer-col a {
+      color: #87a06e;
+      text-decoration: none;
+      margin-right: 12px;
+      display: inline-block;
+    }
+    .footer-bottom {
+      text-align: center;
+      border-top: 1px solid #2c3e26;
+      margin-top: 40px;
+      padding-top: 10px;
+      font-size: 13px;
+      color: #a2ba82;
+    }
+  </style>
+</head>
+<body>
+
+<!-- Header -->
+<header id="slideshow-header">
+  <nav class="navbar">
+    <a href="index.html" class="logo">Silentum Retreat</a>
+    <ul class="nav-links">
+      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="cabins.html">Cabins</a></li>
+      <li><a href="dinein.html">In-House Dine-In</a></li>
+      <li><a href="activities.html">Activities</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="offers.html">Offers</a></li>
+      <li class="dropdown">
+        <a href="#" class="dropbtn">More</a>
+        <ul class="dropdown-content">
+          <li><a href="booking.html">Booking</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+        </ul>
+      </li>
+    </ul>
+  </nav>
+</header>
+
+ <!-- Gallery Section -->
+<section class="gallery">
+  <h1>Gallery</h1>
+  <p>Explore the peaceful atmosphere of Silentum Retreat — a visual journey through nature, silence, and serenity.</p>
+
+  <div class="gallery-grid">
+    <img src="image/Eco-cabin exterior view.jpg" alt="Eco-cabin exterior view" />
+    <img src="image/Forest meditation deck.jpg" alt="Forest meditation deck" />
+    <img src="image/Plant-based silent dining.jpg" alt="Plant-based silent dining" />
+    <img src="image/Yoga and breathwork hut.jpg" alt="Yoga and breathwork hut" />
+    <img src="image/Evening view over forest canopy.jpg" alt="Evening view over forest canopy" />
+    <img src="image/Silent walk through forest.jpg" alt="Silent walk through forest" />
+
+    <img src="image/Peaceful lake reflection.jpg" alt="Peaceful lake reflection" />
+    <img src="image/Winding forest trail.jpg" alt="Winding forest trail" />
+    <img src="image/Evening fire circle.jpg" alt="Evening fire circle" />
+    <img src="image/Silent reading area.jpg" alt="Silent reading area" />
+    <img src="image/Mindful tea ceremony.jpg" alt="Mindful tea ceremony" />
+    <img src="image/Birdwatching moments.jpg" alt="Birdwatching moments" />
+
+    <img src="image/View from the mountain top.jpg" alt="View from the mountain top" />
+    <img src="image/Relaxation massage therapy.jpg" alt="Relaxation massage therapy" />
+    <img src="image/Herbal medicine garden.jpg" alt="Herbal medicine garden" />
+    <img src="image/Nearby waterfall.jpg" alt="Nearby waterfall" />
+    <img src="image/Second eco-cabin.jpg" alt="Second eco-cabin" />
+    <img src="image/Colorful forest blooms.jpg" alt="Colorful forest blooms" />
+
+    <img src="image/Starry night sky.jpg" alt="Starry night sky" />
+    <img src="image/Stone meditation path.jpg" alt="Stone meditation path" />
+    <img src="image/Wooden forest bridge.jpg" alt="Wooden forest bridge" />
+    <img src="image/Forest lounge deck.jpg" alt="Forest lounge deck" />
+    <img src="image/image6.jpg" alt="Morning meditation" />
+    <img src="image/Bamboo grove tranquility.jpg" alt="Bamboo grove tranquility" />
+  
+    <img src="image/Eco-cabin with garden view.jpg" alt="Eco-cabin with garden view" />
+    <img src="image/Small pond with lotus flowers.jpg" alt="Small pond with lotus flowers" />
+    <img src="image/Early morning sunrise.jpg" alt="Early morning sunrise" />
+    <img src="image/Group meditation in progress.jpg" alt="Group meditation in progress" />
+    <img src="image/Forest exploration trail.jpg" alt="Forest exploration trail" />
+    <img src="image/Silentum Retreat entrance sign.jpg" alt="Silentum Retreat entrance sign" />
+ 
+  </div>
+
+  <p><em>Note: Images are placeholders — replace with your own photos in the 'images' folder.</em></p>
+</section>
+
+
+<!-- Footer -->
+<footer style="background: #0f1b12 url('image/footer.jpg') no-repeat center center / cover; color: #9ccc6b; padding: 60px 20px 30px; font-size: 14px;">
+  <div style="display: flex; flex-wrap: wrap; justify-content: space-between; max-width: 1200px; margin: auto; gap: 30px;">
+    
+    <!-- Logo -->
+    <div style="flex: 1 1 200px;">
+      <img src="image/logo.jpg" alt="Silentum Logo" style="width: 140px; margin-bottom: 15px;">
+    </div>
+
+    <!-- Social and Navigation -->
+    <div style="flex: 2 1 500px; text-align: center;">
+      <div style="margin-bottom: 15px;">
+        <a href="#" style="margin: 0 8px;"><img src="image/facebook.jpg" width="24" alt="Facebook"></a>
+        <a href="#" style="margin: 0 8px;"><img src="image/twitter.jpg" width="24" alt="Twitter"></a>
+        <a href="#" style="margin: 0 8px;"><img src="image/instagram.jpg" width="24" alt="Instagram"></a>
+      </div>
+      <nav style="margin-bottom: 10px;">
+        <a href="index.html" style="color: #9ccc6b; margin: 0 12px; text-decoration: none;">HOME</a>
+        <a href="about.html" style="color: #9ccc6b; margin: 0 12px; text-decoration: none;">ABOUT</a>
+        <a href="cabins.html" style="color: #9ccc6b; margin: 0 12px; text-decoration: none;">ACCOMMODATION</a>
+        <a href="dinein.html" style="color: #9ccc6b; margin: 0 12px; text-decoration: none;">DINING</a>
+        <a href="offers.html" style="color: #9ccc6b; margin: 0 12px; text-decoration: none;">SPECIAL OFFERS</a>
+        <a href="activities.html" style="color: #9ccc6b; margin: 0 12px; text-decoration: none;">EXPERIENCES</a>
+        <a href="contact.html" style="color: #9ccc6b; margin: 0 12px; text-decoration: none;">CONTACT</a>
+      </nav>
+    </div>
+
+    <!-- Contact Details -->
+    <div style="flex: 1 1 200px; text-align: right;">
+      <p style="margin: 5px 0;"><strong>Address</strong><br>72/2 Puwakpitiya Road, Seethawaka, Awissawella</p>
+      <br><p style="margin: 5px 0;"><strong>Phone</strong><br><a href="tel:+94362220122" style="color: #9ccc6b;">036 2220122</a></p>
+      <br><p style="margin: 5px 0;"><strong>Email</strong><br><a href="mailto:silentumretreat@gmail.com" style="color: #9ccc6b;">silentumretreat@gmail.com</a></p>
+    </div>
+  </div>
+
+  <div style="text-align: center; border-top: 1px solid #2c3e26; margin-top: 40px; padding-top: 10px; font-size: 13px; color: #7fa96b;">
+    <p>&copy; 2025 Silentum Retreat. All rights reserved. | Designed by You</p>
+  </div>
+</footer>
+<script>
+  const header = document.getElementById('slideshow-header');
+  const images = [
+    "image/image1.jpg",
+    "image/famil.jpg",
+    "image/dinein.jpg"
+  ];
+  let index = 0;
+
+  function changeHeaderBackground() {
+    header.style.backgroundImage = `url('${images[index]}')`;
+    header.style.backgroundSize = "cover";
+    header.style.backgroundPosition = "center";
+    index = (index + 1) % images.length;
+  }
+
+  changeHeaderBackground(); // Initial load
+  setInterval(changeHeaderBackground, 6000); // Every 6 seconds
+</script>
+<!-- Lightbox Modal -->
+<!-- Lightbox Modal -->
+<div id="lightbox">
+  <span id="lightbox-close">&times;</span>
+  <img id="lightbox-img" alt="Full Size" />
+</div>
+<script>
+  const lightbox = document.getElementById('lightbox');
+  const lightboxImg = document.getElementById('lightbox-img');
+  const closeBtn = document.getElementById('lightbox-close');
+
+  document.querySelectorAll('.gallery-grid img').forEach(img => {
+    img.addEventListener('click', () => {
+      lightbox.style.display = 'flex';
+      lightboxImg.src = img.src;
+    });
+  });
+
+  closeBtn.addEventListener('click', () => {
+    lightbox.style.display = 'none';
+  });
+
+  // Also close if clicked outside image
+  lightbox.addEventListener('click', (e) => {
+    if (e.target === lightbox) {
+      lightbox.style.display = 'none';
+    }
+  });
+</script>
+
+
+
+</body>
+</html>

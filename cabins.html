@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Dine-In | Silentum Retreat</title>
+  <style>
+@media (max-width: 768px) {
+  header {
+    display: block;
+  }
+}
+
+body {
+      background-color: rgb(223, 220, 220); /* black background for the body */
+      color: #d7ded6; /* light text */
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      color: #0f1b12;
+      padding: 0;
+    }
+header {
+      height: 700px; /* or any height you want */
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      transition: background-image 1s ease-in-out;
+      position: relative;
+      z-index: 10;
+    }
+
+    .navbar {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      background: #674d3b; /* dark brown */
+      padding: 10px 20px;
+      border-radius: 10px;
+      box-sizing: border-box;
+    }
+    .navbar .logo {
+      font-weight: bold;
+      font-size: 24px;
+      color: #87a06e; /* soft green */
+      text-decoration: none;
+    }
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+      margin: 0;
+      padding: 0;
+    }
+    .nav-links li {
+      position: relative;
+    }
+    .nav-links a {
+      color: #d7ded6; /* light text */
+      text-decoration: none;
+      font-weight: 600;
+      padding: 8px 6px;
+      display: block;
+      transition: color 0.3s;
+    }
+    .nav-links a:hover,
+    .nav-links a.active {
+      color: #87a06e; /* green accent */
+    }
+
+    /* Dropdown */
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+    .dropdown .dropbtn::after {
+      content: " ▼";
+      font-size: 12px;
+    }
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background: #222; /* dark background */
+      min-width: 160px;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.7);
+      z-index: 10;
+      border-radius: 4px;
+      margin-top: 5px;
+    }
+    .dropdown-content li {
+      padding: 0;
+    }
+    .dropdown-content a {
+      padding: 10px 16px;
+      display: block;
+      color: #d7ded6;
+    }
+    .dropdown-content a:hover {
+      background: #bad2a2;
+      color: #111;
+    }
+    
+    .hero {
+      padding: 100px 20px;
+      text-align: center;
+      color: #87a06e;
+
+    }
+    .hero h1 {
+      font-size: 3rem;
+      margin-bottom: 10px;
+      text-shadow: 1px 1px 4px #000;
+    }
+    section {
+      max-width: 1100px;
+      margin: 40px auto;
+      padding: 0 20px;
+      color: #000;
+    }
+    h2 {
+      text-align: center;
+      color: #87a06e;
+      font-size: 2rem;
+      margin-bottom: 15px;
+
+    }
+    p, li {
+      font-size: 1.1rem;
+      line-height: 1.6;
+    }
+    .cabin-grid {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-top: 30px;
+    }
+    .cabin-card {
+      background: #674d3b;
+      padding: 20px;
+      border-radius: 10px;
+      width: 300px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.7);
+      color: #d7ded6;
+    }
+    .cabin-card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+    .cabin-card h3 {
+      color: #87a06e;
+      margin-top: 10px;
+    }
+    .btn {
+      background-color: #87a06e;
+      color: #111;
+      padding: 12px 30px;
+      border: none;
+      border-radius: 30px;
+      font-weight: bold;
+      text-decoration: none;
+      display: inline-block;
+      margin-top: 15px;
+    }
+    .btn:hover {
+      background-color: #a2ba82;
+      color: #fff;
+    }
+
+    footer {
+      background: #0f1b12 url('image/footer-bg.jpg') no-repeat center center / cover;
+      color: #d7ded6;
+      padding: 60px 20px 30px;
+      font-size: 14px;
+    }
+    .footer-content {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      max-width: 1200px;
+      margin: auto;
+      gap: 30px;
+    }
+    .footer-col {
+      flex: 1 1 220px;
+    }
+    .footer-col a {
+      color: #87a06e;
+      text-decoration: none;
+      margin-right: 12px;
+      display: inline-block;
+    }
+    .footer-bottom {
+      text-align: center;
+      border-top: 1px solid #2c3e26;
+      margin-top: 40px;
+      padding-top: 10px;
+      font-size: 13px;
+      color: #a2ba82;
+    }
+  </style>
+</head>
+<body>
+
+<!-- Header -->
+<header id="slideshow-header">
+  <nav class="navbar">
+    <a href="index.html" class="logo">Silentum Retreat</a>
+    <ul class="nav-links">
+      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="cabins.html">Cabins</a></li>
+      <li><a href="dinein.html">In-House Dine-In</a></li>
+      <li><a href="activities.html">Activities</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="offers.html">Offers</a></li>
+      <li class="dropdown">
+        <a href="#" class="dropbtn">More</a>
+        <ul class="dropdown-content">
+          <li><a href="booking.html">Booking</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+        </ul>
+      </li>
+    </ul>
+  </nav>
+</header>
+
+<!-- Hero Section -->
+<div class="hero">
+  <h1>Our LumiPod Eco-Cabins</h1>
+  <h3>Sleep in silence. Wake to nature.</h3>
+</div>
+
+<!-- Cabins Content -->
+<section>
+  <h2><b>The LumiPod Experience</b></h2>
+  <p>Silentum Retreat’s signature LumiPods are designed for total immersion in nature. These eight eco-cabins blend architectural beauty with natural harmony, equipped for digital detox, mindfulness, and deep rest.</p>
+
+  <div class="cabin-grid">
+    <div class="cabin-card"><img src="image/lumipod1.jpg"><h3>Forest LumiPod</h3><p>Among tall trees, perfect for stillness seekers.</p></div>
+    <div class="cabin-card"><img src="image/lumipod2.jpg"><h3>Skyview LumiPod</h3><p>Gaze at stars through curved ceilings.</p></div>
+    <div class="cabin-card"><img src="image/lumipod3.jpg"><h3>Honeymoon LumiPod</h3><p>Romantic escape with forest deck and tub.</p></div>
+    <div class="cabin-card"><img src="image/lumipod4.jpg"><h3>Lakefront LumiPod</h3><p>By the lake with tranquil water sounds.</p></div>
+    <div class="cabin-card"><img src="image/zen.jpg"><h3>Zen LumiPod</h3><p>Minimalist interior for mindful living.</p></div>
+    <div class="cabin-card"><img src="image/writers.jpg"><h3>Writer’s LumiPod</h3><p>Perfect for journaling, creativity, silence.</p></div>
+    <div class="cabin-card"><img src="image/famil.jpg"><h3>Family LumiPod</h3><p>Spacious with bunk beds for 3 guests.</p></div>
+    <div class="cabin-card"><img src="image/sunset.jpg"><h3>Sunset LumiPod</h3><p>Panoramic views of golden hour skies.</p></div>
+  </div>
+
+  <p style="text-align: center;">
+    <a href="booking.html" class="btn">Book Your LumiPod</a>
+  </p>
+</section>
+
+<!-- Footer -->
+<footer style="background: #0f1b12 url('image/footer.jpg') no-repeat center center / cover; color: #9ccc6b; padding: 60px 20px 30px; font-size: 14px;">
+  <div style="display: flex; flex-wrap: wrap; justify-content: space-between; max-width: 1200px; margin: auto; gap: 30px;">
+    
+    <!-- Logo -->
+    <div style="flex: 1 1 200px;">
+      <img src="image/logo.jpg" alt="Silentum Logo" style="width: 140px; margin-bottom: 15px;">
+    </div>
+
+    <!-- Social and Navigation -->
+    <div style="flex: 2 1 500px; text-align: center;">
+      <div style="margin-bottom: 15px;">
+        <a href="#" style="margin: 0 8px;"><img src="image/facebook.jpg" width="24" alt="Facebook"></a>
+        <a href="#" style="margin: 0 8px;"><img src="image/twitter.jpg" width="24" alt="Twitter"></a>
+        <a href="#" style="margin: 0 8px;"><img src="image/instagram.jpg" width="24" alt="Instagram"></a>
+      </div>
+      <nav style="margin-bottom: 10px;">
+        <a href="index.html" style="color: #9ccc6b; margin: 0 12px; text-decoration: none;">HOME</a>
+        <a href="about.html" style="color: #9ccc6b; margin: 0 12px; text-decoration: none;">ABOUT</a>
+        <a href="cabins.html" style="color: #9ccc6b; margin: 0 12px; text-decoration: none;">ACCOMMODATION</a>
+        <a href="dinein.html" style="color: #9ccc6b; margin: 0 12px; text-decoration: none;">DINING</a>
+        <a href="offers.html" style="color: #9ccc6b; margin: 0 12px; text-decoration: none;">SPECIAL OFFERS</a>
+        <a href="activities.html" style="color: #9ccc6b; margin: 0 12px; text-decoration: none;">EXPERIENCES</a>
+        <a href="contact.html" style="color: #9ccc6b; margin: 0 12px; text-decoration: none;">CONTACT</a>
+      </nav>
+    </div>
+
+    <!-- Contact Details -->
+    <div style="flex: 1 1 200px; text-align: right;">
+      <p style="margin: 5px 0;"><strong>Address</strong><br>72/2 Puwakpitiya Road, Seethawaka, Awissawella</p>
+      <br><p style="margin: 5px 0;"><strong>Phone</strong><br><a href="tel:+94362220122" style="color: #9ccc6b;">036 2220122</a></p>
+      <br><p style="margin: 5px 0;"><strong>Email</strong><br><a href="mailto:silentumretreat@gmail.com" style="color: #9ccc6b;">silentumretreat@gmail.com</a></p>
+    </div>
+  </div>
+
+  <div style="text-align: center; border-top: 1px solid #2c3e26; margin-top: 40px; padding-top: 10px; font-size: 13px; color: #7fa96b;">
+    <p>&copy; 2025 Silentum Retreat. All rights reserved. | Designed by You</p>
+  </div>
+</footer>
+<script>
+  const header = document.getElementById('slideshow-header');
+  const images = [
+   "image/background1.jpg",
+    "image/background2.jpg",
+    "image/background3.jpg"
+  ];
+  let index = 0;
+
+  function changeHeaderBackground() {
+    header.style.backgroundImage = `url('${images[index]}')`;
+    header.style.backgroundSize = "cover";
+    header.style.backgroundPosition = "center";
+    index = (index + 1) % images.length;
+  }
+
+  changeHeaderBackground(); // Initial load
+  setInterval(changeHeaderBackground, 6000); // Every 6 seconds
+</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

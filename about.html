@@ -1,0 +1,313 @@
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Dine-In | Silentum Retreat</title>
+  <style>
+@media (max-width: 768px) {
+  header {
+    display: block;
+  }
+}
+
+body {
+      background-color: rgb(223, 220, 220); /* black background for the body */
+      color: #d7ded6; /* light text */
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      color: #0f1b12;
+      padding: 0;
+    }
+header {
+      height: 700px; /* or any height you want */
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      transition: background-image 1s ease-in-out;
+      position: relative;
+      z-index: 10;
+    }
+
+    .navbar {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      background: #674d3b; /* dark brown */
+      padding: 10px 20px;
+      border-radius: 10px;
+      box-sizing: border-box;
+    }
+    .navbar .logo {
+      font-weight: bold;
+      font-size: 24px;
+      color: #87a06e; /* soft green */
+      text-decoration: none;
+    }
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+      margin: 0;
+      padding: 0;
+    }
+    .nav-links li {
+      position: relative;
+    }
+    .nav-links a {
+      color: #d7ded6; /* light text */
+      text-decoration: none;
+      font-weight: 600;
+      padding: 8px 6px;
+      display: block;
+      transition: color 0.3s;
+    }
+    .nav-links a:hover,
+    .nav-links a.active {
+      color: #87a06e; /* green accent */
+    }
+
+    /* Dropdown */
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+    .dropdown .dropbtn::after {
+      content: " ▼";
+      font-size: 12px;
+    }
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background: #222; /* dark background */
+      min-width: 160px;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.7);
+      z-index: 10;
+      border-radius: 4px;
+      margin-top: 5px;
+    }
+    .dropdown-content li {
+      padding: 0;
+    }
+    .dropdown-content a {
+      padding: 10px 16px;
+      display: block;
+      color: #d7ded6;
+    }
+    .dropdown-content a:hover {
+      background: #bad2a2;
+      color: #111;
+    }
+    
+
+    section {
+      max-width: 1100px;
+      margin: 50px auto;
+      padding: 0 20px;
+    }
+    section h2 {
+      color: #87a06e; /* green accent */
+      font-size: 2.5rem;
+      margin-bottom: 15px;
+      font-weight: 700;
+      text-align: center;
+      text-shadow: 1px 1px 4px #000;
+    }
+    section p, ul {
+      font-size: 1.1rem;
+      line-height: 1.6;
+      color: #0a0a0a; /* light text */
+      max-width: 900px;
+      margin: 0 auto 30px auto;
+      text-align: center;
+    }
+    ul {
+      list-style-type: disc;
+      padding-left: 20px;
+      text-align: left;
+    }
+
+    footer {
+      background: #0f1b12 url('image/footer-bg.jpg') no-repeat center center / cover;
+      color: #d7ded6;
+      padding: 60px 20px 30px;
+      font-size: 14px;
+    }
+    .footer-content {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      max-width: 1200px;
+      margin: auto;
+      gap: 30px;
+    }
+    .footer-col {
+      flex: 1 1 220px;
+    }
+    .footer-col a {
+      color: #87a06e;
+      text-decoration: none;
+      margin-right: 12px;
+      display: inline-block;
+    }
+    .footer-bottom {
+      text-align: center;
+      border-top: 1px solid #2c3e26;
+      margin-top: 40px;
+      padding-top: 10px;
+      font-size: 13px;
+      color: #a2ba82;
+    }
+  </style>
+</head>
+<body>
+
+<!-- Header -->
+<header id="slideshow-header">
+  <nav class="navbar">
+    <a href="index.html" class="logo">Silentum Retreat</a>
+    <ul class="nav-links">
+      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="cabins.html">Cabins</a></li>
+      <li><a href="dinein.html">In-House Dine-In</a></li>
+      <li><a href="activities.html">Activities</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="offers.html">Offers</a></li>
+      <li class="dropdown">
+        <a href="#" class="dropbtn">More</a>
+        <ul class="dropdown-content">
+          <li><a href="booking.html">Booking</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+        </ul>
+      </li>
+    </ul>
+  </nav>
+</header>
+
+
+  <section class="about-section">
+    <h2>Overview</h2>
+    <p>Silentum Retreat is a sanctuary designed for silence, deep rest, and reconnection with nature. Located in Awissawella, our off-grid, soundproof eco-cabins and minimalist luxury help guests unplug from digital life and reconnect with themselves.</p>
+
+    <h2>Services & Facilities</h2>
+    <ul>
+      <li>Soundproof eco-cabins with aromatherapy</li>
+      <li>Digital detox experience (device surrender)</li>
+      <li>Sleep optimization sessions with certified sleep coaches</li>
+      <li>Plant-based meals served in silent zones</li>
+      <li>Yoga, meditation, journaling & forest walks</li>
+      <li>Mindful crafting, breathwork, and gratitude rituals</li>
+    </ul>
+
+    <h2>Map & Directions</h2>
+    <p>
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d126745.32657374633!2d80.14126404999999!3d6.9109629!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae2f85a788b5f3f%3A0xe23d1f9b1541477!2sPuwakpitiya%2C%20Avissawella!5e0!3m2!1sen!2slk!4v1684567890123"
+        width="100%"
+        height="400"
+        style="border:0; border-radius: 8px;"
+        allowfullscreen=""
+        loading="lazy"
+      ></iframe>
+    </p>
+    <p>
+      Address: 72/2 Puwakpitiya Road, Seethawaka, Awissawella<br />
+      <a
+        href="https://www.google.com/maps/@6.9109629,80.1838005,192m/data=!3m1!1e3!5m1!1e1?entry=ttu&g_ep=EgoyMDI1MDUyNi4wIKXMDSoASAFQAw%3D%3D"
+        target="_blank"
+        style="color: #87a06e;"
+        >View on Google Maps</a
+      >
+    </p>
+  </section>
+
+
+
+<!-- Footer -->
+<footer style="background: #0f1b12 url('image/footer.jpg') no-repeat center center / cover; color: #9ccc6b; padding: 60px 20px 30px; font-size: 14px;">
+  <div style="display: flex; flex-wrap: wrap; justify-content: space-between; max-width: 1200px; margin: auto; gap: 30px;">
+    
+    <!-- Logo -->
+    <div style="flex: 1 1 200px;">
+      <img src="image/logo.jpg" alt="Silentum Logo" style="width: 140px; margin-bottom: 15px;">
+    </div>
+
+    <!-- Social and Navigation -->
+    <div style="flex: 2 1 500px; text-align: center;">
+      <div style="margin-bottom: 15px;">
+        <a href="#" style="margin: 0 8px;"><img src="image/facebook.jpg" width="24" alt="Facebook"></a>
+        <a href="#" style="margin: 0 8px;"><img src="image/twitter.jpg" width="24" alt="Twitter"></a>
+        <a href="#" style="margin: 0 8px;"><img src="image/instagram.jpg" width="24" alt="Instagram"></a>
+      </div>
+      <nav style="margin-bottom: 10px;">
+        <a href="index.html" style="color: #9ccc6b; margin: 0 12px; text-decoration: none;">HOME</a>
+        <a href="about.html" style="color: #9ccc6b; margin: 0 12px; text-decoration: none;">ABOUT</a>
+        <a href="cabins.html" style="color: #9ccc6b; margin: 0 12px; text-decoration: none;">ACCOMMODATION</a>
+        <a href="dinein.html" style="color: #9ccc6b; margin: 0 12px; text-decoration: none;">DINING</a>
+        <a href="offers.html" style="color: #9ccc6b; margin: 0 12px; text-decoration: none;">SPECIAL OFFERS</a>
+        <a href="activities.html" style="color: #9ccc6b; margin: 0 12px; text-decoration: none;">EXPERIENCES</a>
+        <a href="contact.html" style="color: #9ccc6b; margin: 0 12px; text-decoration: none;">CONTACT</a>
+      </nav>
+    </div>
+
+    <!-- Contact Details -->
+    <div style="flex: 1 1 200px; text-align: right;">
+      <p style="margin: 5px 0;"><strong>Address</strong><br>72/2 Puwakpitiya Road, Seethawaka, Awissawella</p>
+      <br><p style="margin: 5px 0;"><strong>Phone</strong><br><a href="tel:+94362220122" style="color: #9ccc6b;">036 2220122</a></p>
+      <br><p style="margin: 5px 0;"><strong>Email</strong><br><a href="mailto:silentumretreat@gmail.com" style="color: #9ccc6b;">silentumretreat@gmail.com</a></p>
+    </div>
+  </div>
+
+  <div style="text-align: center; border-top: 1px solid #2c3e26; margin-top: 40px; padding-top: 10px; font-size: 13px; color: #7fa96b;">
+    <p>&copy; 2025 Silentum Retreat. All rights reserved. | Designed by You</p>
+  </div>
+</footer>
+<script>
+  const header = document.getElementById('slideshow-header');
+  const images = [
+  "image/image1.jpg",
+    "image/image2.jpg",
+    "image/image3.jpg"
+  ];
+  let index = 0;
+
+  function changeHeaderBackground() {
+    header.style.backgroundImage = `url('${images[index]}')`;
+    header.style.backgroundSize = "cover";
+    header.style.backgroundPosition = "center";
+    index = (index + 1) % images.length;
+  }
+
+  changeHeaderBackground(); // Initial load
+  setInterval(changeHeaderBackground, 6000); // Every 6 seconds
+</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Activities | Silentum Retreat</title>
+  <link rel="stylesheet" href="css/activitiescss.css" />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+body {
+      background-color: rgb(223, 220, 220); /* black background for the body */
+      color: #d7ded6; /* light text */
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      color: #0f1b12;
+      padding: 0;
+    }
+header {
+      height: 700px; /* or any height you want */
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      transition: background-image 1s ease-in-out;
+      position: relative;
+    }
+
+    .navbar {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      background: #674d3b; /* dark brown */
+      padding: 10px 20px;
+      border-radius: 10px;
+      box-sizing: border-box;
+    }
+    .navbar .logo {
+      font-weight: bold;
+      font-size: 24px;
+      color: #87a06e; /* soft green */
+      text-decoration: none;
+    }
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+      margin: 0;
+      padding: 0;
+    }
+    .nav-links li {
+      position: relative;
+    }
+    .nav-links a {
+      color: #d7ded6; /* light text */
+      text-decoration: none;
+      font-weight: 600;
+      padding: 8px 6px;
+      display: block;
+      transition: color 0.3s;
+    }
+    .nav-links a:hover,
+    .nav-links a.active {
+      color: #87a06e; /* green accent */
+    }
+
+    /* Dropdown */
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+    .dropdown .dropbtn::after {
+      content: " ▼";
+      font-size: 12px;
+    }
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background: #222; /* dark background */
+      min-width: 160px;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.7);
+      z-index: 10;
+      border-radius: 4px;
+      margin-top: 5px;
+    }
+    .dropdown-content li {
+      padding: 0;
+    }
+    .dropdown-content a {
+      padding: 10px 16px;
+      display: block;
+      color: #d7ded6;
+    }
+    .dropdown-content a:hover {
+      background: #bad2a2;
+      color: #111;
+    }
+.offers {
+  background-color: #d7ded6;
+  color: #0f100e;
+  padding: 60px 20px;
+  text-align: center;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.offers h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #674d3b;
+}
+
+.offers p {
+  max-width: 800px;
+  margin: 0 auto 40px auto;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.package {
+  background-color: #f5f8f4;
+  border-left: 6px solid #87a06e;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  padding: 25px;
+  margin: 20px auto;
+  max-width: 700px;
+  text-align: left;
+  transition: transform 0.3s ease;
+}
+
+.package:hover {
+  transform: translateY(-5px);
+}
+
+.package h2 {
+  color: #674d3b;
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.package p {
+  font-size: 1rem;
+  margin: 6px 0;
+  color: #333;
+}
+
+.package strong {
+  color: #0f100e;
+}
+
+
+
+    footer {
+      background: #0f1b12 url('image/footer-bg.jpg') no-repeat center center / cover;
+      color: #d7ded6;
+      padding: 60px 20px 30px;
+      font-size: 14px;
+    }
+    .footer-content {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      max-width: 1200px;
+      margin: auto;
+      gap: 30px;
+    }
+    .footer-col {
+      flex: 1 1 220px;
+    }
+    .footer-col a {
+      color: #87a06e;
+      text-decoration: none;
+      margin-right: 12px;
+      display: inline-block;
+    }
+    .footer-bottom {
+      text-align: center;
+      border-top: 1px solid #2c3e26;
+      margin-top: 40px;
+      padding-top: 10px;
+      font-size: 13px;
+      color: #a2ba82;
+    }
+  </style>
+</head>
+<body>
+
+<!-- Header -->
+<header id="slideshow-header">
+  <nav class="navbar">
+    <a href="index.html" class="logo">Silentum Retreat</a>
+    <ul class="nav-links">
+      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="cabins.html">Cabins</a></li>
+      <li><a href="dinein.html">In-House Dine-In</a></li>
+      <li><a href="activities.html">Activities</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="offers.html">Offers</a></li>
+      <li class="dropdown">
+        <a href="#" class="dropbtn">More</a>
+        <ul class="dropdown-content">
+          <li><a href="booking.html">Booking</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+        </ul>
+      </li>
+    </ul>
+  </nav>
+</header>
+
+  <!-- Offers Section -->
+  <section class="offers">
+    <h1>Illustrative Wellness Packages (Including Food & Activities)</h1>
+    <p>These packages combine accommodation, daily breakfast, lunch, and dinner (from the a la carte menu), and a curated selection of activities.
+All guests receive a refreshing welcome drink upon arrival.</p>
+
+    <div class="package">
+      <h2>Package 1: The Digital Reset</h2>
+      <p><strong>Duration:</strong> 2 Days / 1 Night</p>
+      <p><strong>Focus:</strong> Initial disconnection and calm.</p>
+      <p><strong>Activities Included (Per Person):</strong> Whispers of Scent, Sacred Breath, Silent Earth Walks, Earthing Ritual, Still Waters Within</p>
+      <p><strong>Illustrative Total Price: </strong><br>
+        For 1 Person: LKR 80,000<br>
+        For 2 People: LKR 135,000 (Significant saving for couples)<br>
+        For 3 People: LKR 175,000  (Greater saving per person for small groups)
+
+      </p>
+    </div>
+
+    <div class="package">
+      <h2>Package 2: Mindful Journey</h2>
+      <p><strong>Duration:</strong> 3 Days / 2 Nights</p>
+      <p><strong>Focus:</strong> Initial disconnection and calm.</p>
+      <p><strong>Activities Included (Per Person):</strong> Soul Script, Earthing Ritual, Still Waters Within, Walking Presence, Rise & Root Yoga, Sacred Breath, Heart Light.</p>
+      <p><strong>Illustrative Total Price:</strong><br>
+        For 1 Person: LKR 160,000<br>
+        For 2 People: LKR 265,000 (Substantial savings for couples)<br>
+        For 3 People: LKR 340,000 (Maximum value per person for groups)
+      </p>
+    </div>
+
+    <div class="package">
+      <h2>Package 3:Sleep & Serenity Retreat</h2>
+      <p><strong>Duration:</strong> 4 Days / 3 Nights</p>
+      <p><strong>Focus:</strong> Comprehensive sleep optimization and profound rest.</p>
+      <p><strong>Activities Included (Per Person):</strong> Sleep Sanctuary, Sacred Breath, Whispers of Scent, Silent Earth Walks (daily), Zen Seat, Heart Light, Flow & Feel, Still Waters Within, Mindful Hands.</p>
+      <p><strong>Illustrative Total Price:</strong><br>
+        For 1 Person: LKR 240,000<br>
+        For 2 People: LKR 405,000 (Substantial discount for couples)<br>
+        For 3 People: LKR 525,000 (Excellent per-person rate for groups)
+      </p>
+    </div>
+
+    <div class="package">
+      <h2>Package 4: Holistic Harmony</h2>
+      <p><strong>Duration:</strong> 5 Days / 4 Nights</p>
+      <p><strong>Focus:</strong> Blending various wellness activities for complete mind-body rejuvenation.</p>
+      <p><strong>Activities Included (Per Person): </strong>Sleep Sanctuary, Sacred Breath, Whispers of Scent, Silent Earth Walks (daily), Soul Script, Earthing Ritual, Still Waters Within, Mindful Hands, Flow & Feel, Rise & Root Yoga, Zen Seat, Walking Presence, Heart Light.</p>
+      <p><strong>Illustrative Total Price:</strong><br>
+        For 1 Person: LKR 325,000<br>
+        For 2 People: LKR 550,000(Significant savings for two) <br>
+        For 3 People: LKR 715,000(Optimal value for a comprehensive group experience)
+      </p>
+    </div>
+
+<!-- Footer -->
+<footer style="background: #0f1b12 url('image/footer.jpg') no-repeat center center / cover; color: #9ccc6b; padding: 60px 20px 30px; font-size: 14px;">
+  <div style="display: flex; flex-wrap: wrap; justify-content: space-between; max-width: 1200px; margin: auto; gap: 30px;">
+    
+    <!-- Logo -->
+    <div style="flex: 1 1 200px;">
+      <img src="image/logo.jpg" alt="Silentum Logo" style="width: 140px; margin-bottom: 15px;">
+    </div>
+
+    <!-- Social and Navigation -->
+    <div style="flex: 2 1 500px; text-align: center;">
+      <div style="margin-bottom: 15px;">
+        <a href="#" style="margin: 0 8px;"><img src="image/facebook.jpg" width="24" alt="Facebook"></a>
+        <a href="#" style="margin: 0 8px;"><img src="image/twitter.jpg" width="24" alt="Twitter"></a>
+        <a href="#" style="margin: 0 8px;"><img src="image/instagram.jpg" width="24" alt="Instagram"></a>
+      </div>
+      <nav style="margin-bottom: 10px;">
+        <a href="index.html" style="color: #9ccc6b; margin: 0 12px; text-decoration: none;">HOME</a>
+        <a href="about.html" style="color: #9ccc6b; margin: 0 12px; text-decoration: none;">ABOUT</a>
+        <a href="cabins.html" style="color: #9ccc6b; margin: 0 12px; text-decoration: none;">ACCOMMODATION</a>
+        <a href="dinein.html" style="color: #9ccc6b; margin: 0 12px; text-decoration: none;">DINING</a>
+        <a href="offers.html" style="color: #9ccc6b; margin: 0 12px; text-decoration: none;">SPECIAL OFFERS</a>
+        <a href="activities.html" style="color: #9ccc6b; margin: 0 12px; text-decoration: none;">EXPERIENCES</a>
+        <a href="contact.html" style="color: #9ccc6b; margin: 0 12px; text-decoration: none;">CONTACT</a>
+      </nav>
+    </div>
+
+    <!-- Contact Details -->
+    <div style="flex: 1 1 200px; text-align: right;">
+      <p style="margin: 5px 0;"><strong>Address</strong><br>72/2 Puwakpitiya Road, Seethawaka, Awissawella</p>
+      <br><p style="margin: 5px 0;"><strong>Phone</strong><br><a href="tel:+94362220122" style="color: #9ccc6b;">036 2220122</a></p>
+      <br><p style="margin: 5px 0;"><strong>Email</strong><br><a href="mailto:silentumretreat@gmail.com" style="color: #9ccc6b;">silentumretreat@gmail.com</a></p>
+    </div>
+  </div>
+
+  <div style="text-align: center; border-top: 1px solid #2c3e26; margin-top: 40px; padding-top: 10px; font-size: 13px; color: #7fa96b;">
+    <p>&copy; 2025 Silentum Retreat. All rights reserved. | Designed by You</p>
+  </div>
+</footer>
+<script>
+  const header = document.getElementById('slideshow-header');
+  const images = [
+    "image/offer1.jpg",
+    "image/offer2.jpg",
+    "image/offer3.jpg"
+  ];
+  let index = 0;
+
+  function changeHeaderBackground() {
+    header.style.backgroundImage = `url('${images[index]}')`;
+    header.style.backgroundSize = "cover";
+    header.style.backgroundPosition = "center";
+    index = (index + 1) % images.length;
+  }
+
+  changeHeaderBackground(); // Initial load
+  setInterval(changeHeaderBackground, 6000); // Every 6 seconds
+</script>
+
+</body>
+</html>
